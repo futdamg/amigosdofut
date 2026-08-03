@@ -56,10 +56,11 @@ const galleryPhotos = [
 /* ---------------------------------------------------------
    Render: fotos do "Quem somos"
 --------------------------------------------------------- */
+
 function renderAboutPhotos(){
   const wrap = document.getElementById('aboutPhotos');
   if (!wrap) return;
-
+ 
   if (aboutPhotos.length === 0){
     wrap.innerHTML = `
       <div class="photo-slot photo-slot--empty">FOTO 1<br>(vertical)</div>
@@ -68,21 +69,21 @@ function renderAboutPhotos(){
     `;
     return;
   }
-
+ 
   wrap.innerHTML = aboutPhotos.slice(0, 3).map(photo => `
     <div class="photo-slot">
       <img src="${photo.src}" alt="${photo.alt || 'Foto do grupo Fut dos Amigos'}" loading="lazy">
     </div>
   `).join('');
 }
-
+ 
 /* ---------------------------------------------------------
    Render: grade da Galeria
 --------------------------------------------------------- */
 function renderGallery(){
   const grid = document.getElementById('galleryGrid');
   if (!grid) return;
-
+ 
   if (galleryPhotos.length === 0){
     grid.innerHTML = Array.from({ length: 6 }).map((_, i) => `
       <div class="gallery-item gallery-item--empty">
@@ -91,14 +92,14 @@ function renderGallery(){
     `).join('');
     return;
   }
-
+ 
   grid.innerHTML = galleryPhotos.map((photo, i) => `
     <div class="gallery-item reveal" data-index="${i}">
       <img src="${photo.src}" alt="${photo.alt || 'Foto da galeria'}" loading="lazy">
       ${photo.caption ? `<span class="gallery-item__caption">${photo.caption}</span>` : ''}
     </div>
   `).join('');
-
+ 
   // Lightbox ao clicar
   grid.querySelectorAll('.gallery-item').forEach(item => {
     item.addEventListener('click', () => {
@@ -107,17 +108,17 @@ function renderGallery(){
       openLightbox(img.src, img.alt);
     });
   });
-
+ 
   observeReveal(); // re-observa os novos itens
 }
-
+ 
 /* ---------------------------------------------------------
    Lightbox
 --------------------------------------------------------- */
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
 const lightboxClose = document.getElementById('lightboxClose');
-
+ 
 function openLightbox(src, alt){
   lightboxImg.src = src;
   lightboxImg.alt = alt || '';
@@ -133,13 +134,13 @@ function closeLightbox(){
 lightboxClose?.addEventListener('click', closeLightbox);
 lightbox?.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-
+ 
 /* ---------------------------------------------------------
    Menu mobile
 --------------------------------------------------------- */
 const burgerBtn = document.getElementById('burgerBtn');
 const mainNav = document.getElementById('mainNav');
-
+ 
 burgerBtn?.addEventListener('click', () => {
   const isOpen = mainNav.classList.toggle('is-open');
   burgerBtn.classList.toggle('is-open', isOpen);
@@ -152,7 +153,7 @@ mainNav?.querySelectorAll('a').forEach(link => {
     burgerBtn.setAttribute('aria-expanded', 'false');
   });
 });
-
+ 
 /* ---------------------------------------------------------
    Header muda de fundo ao rolar
 --------------------------------------------------------- */
@@ -162,14 +163,14 @@ window.addEventListener('scroll', () => {
     ? 'rgba(7,16,25,.96)'
     : 'linear-gradient(180deg, rgba(7,16,25,.92), rgba(7,16,25,.55) 80%, transparent)';
 }, { passive: true });
-
+ 
 /* ---------------------------------------------------------
    Botão "rola a bola" leva até Quem Somos
 --------------------------------------------------------- */
 document.getElementById('scrollHint')?.addEventListener('click', () => {
   document.getElementById('quem-somos')?.scrollIntoView({ behavior: 'smooth' });
 });
-
+ 
 /* ---------------------------------------------------------
    Reveal on scroll (IntersectionObserver)
 --------------------------------------------------------- */
@@ -187,14 +188,14 @@ function observeReveal(){
   }
   document.querySelectorAll('.reveal:not(.in-view)').forEach(el => revealObserver.observe(el));
 }
-
+ 
 // Marca os elementos que devem receber a animação de reveal
 function tagRevealTargets(){
   document.querySelectorAll(
     '.about__text, .about__photos, .value-card, .gallery__lead, .footer__brand, .footer__cta'
   ).forEach(el => el.classList.add('reveal'));
 }
-
+ 
 /* ---------------------------------------------------------
    Placar animado (efeito "flip")
 --------------------------------------------------------- */
@@ -204,13 +205,13 @@ function animateScoreFlip(el){
   const digitCount = digitEls.length;
   const duration = 1400;
   const start = performance.now();
-
+ 
   function tick(now){
     const progress = Math.min((now - start) / duration, 1);
     const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
     const current = Math.round(eased * target);
     const str = String(current).padStart(digitCount, '0');
-
+ 
     str.split('').forEach((digit, i) => {
       if (digitEls[i].textContent !== digit){
         digitEls[i].textContent = digit;
@@ -218,12 +219,12 @@ function animateScoreFlip(el){
         requestAnimationFrame(() => { digitEls[i].style.transform = ''; });
       }
     });
-
+ 
     if (progress < 1) requestAnimationFrame(tick);
   }
   requestAnimationFrame(tick);
 }
-
+ 
 function initScoreboard(){
   const flips = document.querySelectorAll('.score-item__flip');
   const observer = new IntersectionObserver((entries, obs) => {
@@ -236,12 +237,12 @@ function initScoreboard(){
   }, { threshold: 0.4 });
   flips.forEach(el => observer.observe(el));
 }
-
+ 
 /* ---------------------------------------------------------
    Rodapé: ano atual + link do WhatsApp
 --------------------------------------------------------- */
 document.getElementById('year').textContent = new Date().getFullYear();
-
+ 
 // Troque o número abaixo (com DDI+DDD) pelo número real do grupo
 const whatsappNumber = '5567900000000';
 const whatsappMessage = 'Oi! Quero saber como entrar no Fut dos Amigos 🙌⚽';
@@ -249,7 +250,7 @@ document.getElementById('whatsappBtn')?.setAttribute(
   'href',
   `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
 );
-
+ 
 /* ---------------------------------------------------------
    Init
 --------------------------------------------------------- */
@@ -260,3 +261,4 @@ document.addEventListener('DOMContentLoaded', () => {
   observeReveal();
   initScoreboard();
 });
+ 
