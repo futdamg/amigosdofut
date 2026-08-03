@@ -1,96 +1,223 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,900&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Oswald:wght@500&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fut dos Amigos — Campo Grande, MS</title>
+<meta name="description" content="Grupo de amigos que joga futebol toda semana em Campo Grande - MS desde 2014. Técnica, humildade, empatia e parceria.">
 
-  	<script type="text/javascript" src="js/script.js"></script>
-	<link rel="shortcut icon" href="img/favicon.png" />
-	<title> FUT DOS AMIGOS | Home </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
- <div class="galeria-modal" onclick="fecharGaleria()">
- 	<span  >X</span>
- 	<img src="">
- </div>
+<!-- ================= RUÍDO / MARCAÇÃO DE CAMPO (decorativo) ================= -->
+<div class="field-lines" aria-hidden="true"></div>
 
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="#topo" class="brand">
+      <img src="logo.png" alt="Escudo Fut dos Amigos" class="brand__logo" id="logoImg">
+      <span class="brand__name">FUT <em>DOS</em> AMIGOS</span>
+    </a>
 
-	<header >
-		<img class="logo" src="img/logo.png"> 
+    <nav class="nav" id="mainNav">
+      <a href="#quem-somos" class="nav__link">Quem somos</a>
+      <a href="#valores" class="nav__link">Valores</a>
+      <a href="#galeria" class="nav__link">Galeria</a>
+      <a href="#contato" class="nav__link">Contato</a>
+      <a href="#contato" class="nav__cta">Informações</a>
+    </nav>
 
-<a href="info/info.html"><button class="but-log" >
-			INFORMAÇÕES
-		</button></a>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-				
-	</header>
+<!-- ================= HERO ================= -->
+<section class="hero" id="topo">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="hero__grass" aria-hidden="true"></div>
 
-	<div class="hm-info">
-		<img src="img/futamigos.jpg">
+  <div class="hero__content">
+    <p class="hero__eyebrow">
+      <span class="dot"></span> CAMPO GRANDE — MS &nbsp;·&nbsp; TODA SEMANA NO GRAMADO
+    </p>
 
-		<div class="info">
-			<h2>Quem somos</h2>
-				<p>
+    <h1 class="hero__title">
+      <span class="flip-line" data-text="FUT DOS">FUT DOS</span>
+      <span class="flip-line flip-line--accent" data-text="AMIGOS">AMIGOS</span>
+    </h1>
 
-				<p>  Somos um grupo de amigos que nos reunimos toda semana para jogarmos futebol e colocar o papo em dia. Nosso grupo foi criado em 2014, com saídas de alguns membros e entrada de novos, sempre mantivemos a nossa essência, a Amizade !</p>
+    <p class="hero__subtitle">
+      Não é só uma pelada. É o encontro que a gente não perde, desde 2014 —
+      bola rolando, papo em dia e a amizade sempre no placar.
+    </p>
 
-				<br>
-				<p><b>Missão:</b> Propagar e fortalecer os vínculos de amizades geradas no futebol. Assim como proporcional saúde   e bem estar aos participantes.</p>
+    <div class="hero__actions">
+      <a href="#quem-somos" class="btn btn--primary">Conheça o grupo</a>
+      <a href="#galeria" class="btn btn--ghost">Ver a galeria</a>
+    </div>
+  </div>
 
-				<br>
-				<p><b>Visão:</b> Ser o maior e melhor grupo de "Futeboleiros" de Campo Grande -Ms.</p>
+  <button class="scroll-hint" id="scrollHint" aria-label="Rolar para baixo">
+    <span class="scroll-hint__ball"></span>
+    <span class="scroll-hint__label">ROLA A BOLA</span>
+  </button>
+</section>
 
-				<br>
-				<p><b>Valores:</b> Técnica, humildade ,empatia e parceria.</p></p>	
-		</div>
-	</div>
+<!-- ================= PLACAR / SCOREBOARD ================= -->
+<section class="scoreboard" aria-label="Números do grupo">
+  <div class="scoreboard__inner">
 
-	<h1 class="sec">GALERIA</h1>
- 
-	<div class="fotos">
-		<div ><img src="imgg/img (1).jpg" onclick="abrirGaleria('imgg/img (1).jpg')"></div>
-		<div ><img src="imgg/img (2).jpg" onclick="abrirGaleria('imgg/img (2).jpg')"></div>
-		<div ><img src="imgg/img (3).jpg" onclick="abrirGaleria('imgg/img (3).jpg')"></div>
-		<div ><img src="imgg/img (4).jpg" onclick="abrirGaleria('imgg/img (4).jpg')"></div>
-		<div ><img src="imgg/img (5).jpg" onclick="abrirGaleria('imgg/img (5).jpg')"></div>
-		<div ><img src="imgg/img (6).jpg" onclick="abrirGaleria('imgg/img (6).jpg')"></div>
-		<div ><img src="imgg/img (7).jpg" onclick="abrirGaleria('imgg/img (7).jpg')"></div>
-		<div ><img src="imgg/img (8).jpg" onclick="abrirGaleria('imgg/img (8).jpg')"></div>
-		<div ><img src="imgg/img (9).jpg" onclick="abrirGaleria('imgg/img (9).jpg')"></div>
-		<div ><img src="imgg/img (10).jpg" onclick="abrirGaleria('imgg/img (10).jpg')"></div>
-		<div ><img src="imgg/img (11).jpg" onclick="abrirGaleria('imgg/img (11).jpg')"></div>
-		<div ><img src="imgg/img (12).jpg" onclick="abrirGaleria('imgg/img (12).jpg')"></div>
-		<div ><img src="imgg/img (13).jpg" onclick="abrirGaleria('imgg/img (13).jpg')"></div>
-		<div ><img src="imgg/img (14).jpg" onclick="abrirGaleria('imgg/img (14).jpg')"></div>
-		<div ><img src="imgg/img (15).jpg" onclick="abrirGaleria('imgg/img (15).jpg')"></div>
-		<div ><img src="imgg/img (16).jpg" onclick="abrirGaleria('imgg/img (16).jpg')"></div>
-		<div ><img src="imgg/img (17).jpg" onclick="abrirGaleria('imgg/img (17).jpg')"></div>
-		<div ><img src="imgg/img (18).jpg" onclick="abrirGaleria('imgg/img (18).jpg')"></div>
-		<div ><img src="imgg/img (19).jpg" onclick="abrirGaleria('imgg/img (19).jpg')"></div>
-		<div ><img src="imgg/img (20).jpg" onclick="abrirGaleria('imgg/img (20).jpg')"></div>
-		<div ><img src="imgg/img (21).jpg" onclick="abrirGaleria('imgg/img (21).jpg')"></div>
-		<div ><img src="imgg/img (22).jpg" onclick="abrirGaleria('imgg/img (22).jpg')"></div>
-		
-	</div> 
+    <div class="score-item">
+      <div class="score-item__flip" data-target="2014" data-duration="0">
+        <span class="score-item__digit">0</span><span class="score-item__digit">0</span><span class="score-item__digit">0</span><span class="score-item__digit">0</span>
+      </div>
+      <p class="score-item__label">Ano de fundação</p>
+    </div>
 
+    <div class="score-item__sep" aria-hidden="true">×</div>
 
-		<footer>
-		<h1>VICTOR HUGO</h1>
-		<p>@victorhugodev</p>
-	</footer>
+    <div class="score-item">
+      <div class="score-item__flip" data-target="12" data-duration="0">
+        <span class="score-item__digit">0</span><span class="score-item__digit">0</span>
+      </div>
+      <p class="score-item__label">Anos de resenha</p>
+    </div>
+
+    <div class="score-item__sep" aria-hidden="true">×</div>
+
+    <div class="score-item score-item--word">
+      <div class="score-item__word">AMIZADE</div>
+      <p class="score-item__label">Nosso maior título</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= QUEM SOMOS ================= -->
+<section class="about" id="quem-somos">
+  <div class="about__inner">
+
+    <div class="about__text">
+      <span class="section-eyebrow">01 — O GRUPO</span>
+      <h2 class="section-title">Quem somos</h2>
+      <p class="about__lead">
+        Somos um grupo de amigos que se reúne toda semana pra jogar bola e colocar o papo em dia.
+        Criado em 2014, o grupo já viu gente entrar e gente sair — mas uma coisa nunca mudou:
+        a nossa essência, a amizade.
+      </p>
+
+      <div class="pillars">
+        <div class="pillar">
+          <span class="pillar__tag">MISSÃO</span>
+          <p>Propagar e fortalecer os vínculos de amizade gerados no futebol, proporcionando saúde e bem-estar a todos os participantes.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar__tag">VISÃO</span>
+          <p>Ser o maior e melhor grupo de "futeboleiros" de Campo Grande — MS.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about__photos" id="aboutPhotos">
+      <!--
+        ======================================================
+        COLOQUE AQUI AS FOTOS DA SEÇÃO "QUEM SOMOS"
+        (o mesmo colapso de fotos que aparecia no site antigo)
+        Basta adicionar/editar os itens do array `aboutPhotos`
+        lá no início do arquivo script.js.
+        ======================================================
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- ================= VALORES ================= -->
+<section class="values" id="valores">
+  <div class="values__inner">
+    <span class="section-eyebrow section-eyebrow--light">02 — COMO A GENTE JOGA</span>
+    <h2 class="section-title section-title--light">Valores</h2>
+
+    <div class="values__grid">
+      <article class="value-card">
+        <span class="value-card__num">01</span>
+        <h3>Técnica</h3>
+        <p>Categoria dentro de campo — cada um no seu talento, todo mundo somando.</p>
+      </article>
+      <article class="value-card">
+        <span class="value-card__num">02</span>
+        <h3>Humildade</h3>
+        <p>Ganhou, comemora. Perdeu, aprende. Ninguém é melhor que ninguém.</p>
+      </article>
+      <article class="value-card">
+        <span class="value-card__num">03</span>
+        <h3>Empatia</h3>
+        <p>A gente se cobra, mas primeiro se cuida. É jogo, mas é amizade antes.</p>
+      </article>
+      <article class="value-card">
+        <span class="value-card__num">04</span>
+        <h3>Parceria</h3>
+        <p>Time que joga junto há mais de uma década sabe: ninguém carrega o time sozinho.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALERIA ================= -->
+<section class="gallery" id="galeria">
+  <div class="gallery__inner">
+    <span class="section-eyebrow">03 — REGISTROS</span>
+    <h2 class="section-title">Galeria</h2>
+    <p class="gallery__lead">Os melhores momentos de quem não falta na resenha.</p>
+
+    <div class="gallery__grid" id="galleryGrid">
+      <!--
+        ======================================================
+        GALERIA DE FOTOS
+        As fotos são geradas automaticamente pelo script.js a
+        partir do array `galleryPhotos` (no topo do arquivo).
+        Para adicionar fotos, edite esse array — não precisa
+        mexer neste HTML. Cada item vira um card com efeito de
+        zoom/lightbox automaticamente.
+        ======================================================
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTATO / RODAPÉ ================= -->
+<footer class="footer" id="contato">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img src="logo.png" alt="Escudo Fut dos Amigos" class="footer__logo">
+      <p class="footer__tag">Fut dos Amigos — desde 2014, no gramado de Campo Grande - MS.</p>
+    </div>
+
+    <div class="footer__cta">
+      <h3>Quer jogar com a gente?</h3>
+      <p>Chama no grupo, marca presença e aparece na próxima resenha.</p>
+      <a href="#" class="btn btn--primary" id="whatsappBtn">Falar no WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <span>© <span id="year"></span> Fut dos Amigos. Técnica, humildade, empatia e parceria.</span>
+  </div>
+</footer>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">×</button>
+  <img src="" alt="" class="lightbox__img" id="lightboxImg">
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
