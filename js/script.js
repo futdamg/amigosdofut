@@ -16,9 +16,8 @@
 
 // Fotos da seção "Quem somos" (o colapso de 4 fotos, estilo do site antigo)
 const aboutPhotos = [
-
-    { src: "../imgg/img(18).jpg", alt: "Grupo reunido depois do jogo" },
-    { src: "./imgg/img_(9).jpg", alt: "Gol comemorado no gramado" },
+    { src: "imgg/img (18).jpg", alt: "Grupo reunido depois do jogo" },
+    { src: "imgg/img (9).jpg", alt: "Gol comemorado no gramado" },
     { src: "imgg/img (15).jpg", alt: "Resenha depois da partida" },
   // { src: "fotos/quem-somos-4.jpg", alt: "Time completo antes do jogo"
   // Exemplo de como preencher:
@@ -30,10 +29,28 @@ const aboutPhotos = [
 
 // Fotos da seção "Galeria"
 const galleryPhotos = [
-  // Exemplo de como preencher:
-  // { src: "fotos/jogo-01.jpg", alt: "Lance da partida de quinta", caption: "Quinta de bola" },
-  // { src: "fotos/jogo-02.jpg", alt: "Comemoração de gol", caption: "Gol e abraço" },
-  // { src: "fotos/jogo-03.jpg", alt: "Grupo completo", caption: "Time fechado" },
+  { src: "imgg/img (1).jpg", alt: "Foto 1", caption: "Foto 1" },
+  { src: "imgg/img (2).jpg", alt: "Foto 2", caption: "Foto 2" },
+  { src: "imgg/img (3).jpg", alt: "Foto 3", caption: "Foto 3" },
+  { src: "imgg/img (4).jpg", alt: "Foto 4", caption: "Foto 4" },
+  { src: "imgg/img (5).jpg", alt: "Foto 5", caption: "Foto 5" },
+  { src: "imgg/img (6).jpg", alt: "Foto 6", caption: "Foto 6" },
+  { src: "imgg/img (7).jpg", alt: "Foto 7", caption: "Foto 7" },
+  { src: "imgg/img (8).jpg", alt: "Foto 8", caption: "Foto 8" },
+  { src: "imgg/img (9).jpg", alt: "Foto 9", caption: "Foto 9" },
+  { src: "imgg/img (10).jpg", alt: "Foto 10", caption: "Foto 10" },
+  { src: "imgg/img (11).jpg", alt: "Foto 11", caption: "Foto 11" },
+  { src: "imgg/img (12).jpg", alt: "Foto 12", caption: "Foto 12" },
+  { src: "imgg/img (13).jpg", alt: "Foto 13", caption: "Foto 13" },
+  { src: "imgg/img (14).jpg", alt: "Foto 14", caption: "Foto 14" },
+  { src: "imgg/img (15).jpg", alt: "Foto 15", caption: "Foto 15" },
+  { src: "imgg/img (16).jpg", alt: "Foto 16", caption: "Foto 16" },
+  { src: "imgg/img (17).jpg", alt: "Foto 17", caption: "Foto 17" },
+  { src: "imgg/img (18).jpg", alt: "Foto 18", caption: "Foto 18" },
+  { src: "imgg/img (19).jpg", alt: "Foto 19", caption: "Foto 19" },
+  { src: "imgg/img (20).jpg", alt: "Foto 20", caption: "Foto 20" },
+  { src: "imgg/img (21).jpg", alt: "Foto 21", caption: "Foto 21" },
+  { src: "imgg/img (22).jpg", alt: "Foto 22", caption: "Foto 22" },
 ];
 
 /* ---------------------------------------------------------
