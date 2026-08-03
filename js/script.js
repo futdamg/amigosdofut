@@ -16,6 +16,11 @@
 
 // Fotos da seção "Quem somos" (o colapso de 4 fotos, estilo do site antigo)
 const aboutPhotos = [
+
+    { src: "imgg/img (1).jpg", alt: "Grupo reunido depois do jogo" },
+    { src: "imgg/img (1).jpg", alt: "Gol comemorado no gramado" },
+    { src: "imgg/img (1).jpg", alt: "Resenha depois da partida" },
+  // { src: "fotos/quem-somos-4.jpg", alt: "Time completo antes do jogo"
   // Exemplo de como preencher:
   // { src: "fotos/quem-somos-1.jpg", alt: "Grupo reunido depois do jogo" },
   // { src: "fotos/quem-somos-2.jpg", alt: "Gol comemorado no gramado" },
