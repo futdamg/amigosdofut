@@ -44,6 +44,19 @@
   <div class="hero__glow" aria-hidden="true"></div>
   <div class="hero__grass" aria-hidden="true"></div>
 
+  <div class="hero__seal" aria-hidden="true">
+    <svg viewBox="0 0 172 172" class="hero__seal-ring">
+      <circle cx="86" cy="86" r="80"></circle>
+      <defs>
+        <path id="sealPath" d="M86,86 m-68,0 a68,68 0 1,1 136,0 a68,68 0 1,1 -136,0"></path>
+      </defs>
+      <text>
+        <textPath href="#sealPath" startOffset="0%">FUT DOS AMIGOS • DESDE 2014 • CAMPO GRANDE-MS •</textPath>
+      </text>
+    </svg>
+    <img src="imagem/logo.png" alt="" class="hero__seal-logo">
+  </div>
+
   <div class="hero__content">
     <p class="hero__eyebrow">
       <span class="dot"></span> CAMPO GRANDE — MS &nbsp;·&nbsp; TODA SEMANA NO GRAMADO
@@ -76,16 +89,16 @@
   <div class="scoreboard__inner">
 
     <div class="score-item">
-      <div class="score-item__flip" data-target="2014" data-duration="0">
+      <div class="score-item__flip" data-target="2014" data-digits="4">
         <span class="score-item__digit">0</span><span class="score-item__digit">0</span><span class="score-item__digit">0</span><span class="score-item__digit">0</span>
       </div>
       <p class="score-item__label">Ano de fundação</p>
     </div>
 
-    <div class="score-item__sep" aria-hidden="true">×</div>
+    <div class="score-item__sep" aria-hidden="true">·</div>
 
     <div class="score-item">
-      <div class="score-item__flip" data-target="12" data-duration="0">
+      <div class="score-item__flip" data-target="12" data-digits="2">
         <span class="score-item__digit">0</span><span class="score-item__digit">0</span>
       </div>
       <p class="score-item__label">Anos de resenha</p>
@@ -196,7 +209,7 @@
 <footer class="footer" id="contato">
   <div class="footer__inner">
     <div class="footer__brand">
-      <img src="img/logo.png" alt="Escudo Fut dos Amigos" class="footer__logo">
+      <img src="imagem/logo.png" alt="Escudo Fut dos Amigos" class="footer__logo">
       <p class="footer__tag">Fut dos Amigos — desde 2014, no gramado de Campo Grande - MS.</p>
     </div>
 
